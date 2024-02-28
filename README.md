@@ -1,6 +1,6 @@
 # ScriptCollection
 
-Just a little bash script collection that make my life easier on my dayly tasks as DevOps
+Just a little bash script collection that makes my life easier during my daily tasks in DevOps
 
 ## Scripts Included
 - docker-armaggedon: Erases EVERYTHING on docker.
