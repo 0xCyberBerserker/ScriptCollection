@@ -1,0 +1,22 @@
+#!/bin/bash 
+
+
+
+# check if percol installed 
+
+function check_percol() {
+    installed=$(which percol)
+    if [ $? != "0" ]; then 
+        echo "ERR >> Can't find percol on this system. Please install it to continue"
+        exit 2
+    fi
+}
+
+
+function get_containers() {
+    container_id=$(docker ps --format "{{.ID}}\t{{.Names}}" |percol | awk {' print $1 '})
+    docker exec -ti ${container_id} bash
+}
+
+check_percol
+get_containers
