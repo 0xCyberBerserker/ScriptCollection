@@ -1,0 +1,3 @@
+#!/bin/bash
+# This script is used to recreate the terraform environment in case of a terraform error when you make changes to the terraform code.
+terraform destroy -auto-approve && terraform init && terraform apply -auto-approve
