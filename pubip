@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if ip link show | grep -q '^.*: vpn'; then
+    echo "Connected to Wireguard! 👍."
+else
+    echo "No VPN adapter detected. Proceed with caution. ✋."
+fi
+
+public_ip=$(curl -s -4 ifconfig.io)
+country_code=$(curl -s -4 ifconfig.io/country_code)
+
+echo "Your public IP is $public_ip and it is located on $country_code"
