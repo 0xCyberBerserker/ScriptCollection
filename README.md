@@ -13,7 +13,9 @@ Copy and paste:
 ```BASH
 git clone https://github.com/JohnMorgan1234/ScriptCollection.git
 cd ScriptCollection
-chmod +x *
-sudo cp -R * /usr/local/bin
+#Change permissions to all files but not to README.md
+find . -type f ! -name 'README.md' -exec chmod +x {} +
+#Copy all files ignoring README.md to /usr/local/bin
+find . ! -name 'README.md' -exec sudo cp -R {} /usr/local/bin \;
 
 ```
