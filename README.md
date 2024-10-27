@@ -12,7 +12,7 @@ Just a little bash script collection that makes my life easier during my daily t
 
 Copy and paste:
 ```BASH
-git clone https://github.com/JohnMorgan1234/ScriptCollection.git
+git clone https://github.com/0xCyberBerserker/ScriptCollection.git
 cd ScriptCollection
 #Change permissions to all files but not to README.md
 find . -type f ! -name 'README.md' -exec chmod +x {} +
